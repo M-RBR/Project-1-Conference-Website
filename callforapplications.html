@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="navbar-list">
+        <li>
+          <a href="index.html"
+            ><span class="material-symbols-outlined">home</span></a
+          >
+        </li>
+        <li><a href="programme.html">Programme</a></li>
+        <li>
+          <a href="callforapplications.html" class="active"
+            >Call for applications</a
+          >
+        </li>
+        <li><a href="contact.html">Venue & Contact</a></li>
+      </ul>
+    </nav>
+    <main class="application-page">
+      <div class="abstract-explanation">
+        <h3>Call for applications:</h3>
+        <section>
+          <ul>
+            <li>
+              We invite graduate students and early career scholars to submit an
+              abstract to give a presentation during one of the four free spots
+              in the programme (see "TBA").
+            </li>
+            <li>The abstract should be around 300 words.</li>
+            <li>The application deadline is Mai 31th.</li>
+            <li>
+              Accepted applicants will be notified via email by June 15th.
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="abstract-form">
+        <header>To submit an abstract, enter the following information:</header>
+        <form action="confirmation.html" method="GET">
+          <div class="radio-buttons">
+            <p>Select your gender:</p>
+            <input type="radio" id="Mrs" name="gender" value="Mrs" />
+            <label for="Mrs">Mrs</label><br />
+            <input type="radio" id="Mr" name="gender" value="Mr" />
+            <label for="Mr">Mr</label><br />
+            <input type="radio" id="Mx" name="gender" value="Mx" />
+            <label for="Mx">Mx</label>
+            <input type="radio" id="Not" name="gender" value="Not" />
+            <label for="Not">Prefer not to say</label>
+          </div>
+          <br />
+          <label for="status">Status:</label>
+          <select name="status" id="status">
+            <option value="none">Select an option</option>
+            <option value="Master's student">Master's student</option>
+            <option value="PhD student">PhD student</option>
+            <option value="Post-Doc">Post-Doc</option>
+          </select>
+          <br />
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" /><br /><br />
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" /><br /><br />
+          <label for="email">Email address:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+          <p><label for="abstract">Type your abstract here:</label></p>
+          <textarea
+            id="abstract"
+            name="abstract"
+            rows="15"
+            cols="50"
+            maxlength="1800"
+            placeholder="Max. 1800 characters (ca. 300 words)."
+          ></textarea>
+          <br /><br />
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            value="consent"
+            required
+          />
+          <label for="consent"
+            >I agree to the storage and processing of my personal data.</label
+          >
+          <br /><br />
+          <input onclick="confirmation()" type="submit" value="Submit" />
+          <script src="confirmation.js">
+            function confirmation() {
+              confirm("Done!");
+            }
+          </script>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
